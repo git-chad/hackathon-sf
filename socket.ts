@@ -1,7 +1,7 @@
 import { io, Socket } from "socket.io-client";
 import { useEffect } from "react";
 import { useChatStore } from "@/stores/useChatStore";
-const URL = "http://localhost:3001";
+const URL = "http://localhost:3000";
 export let socket: Socket;
 export const useWebSocket = () => {
   const addMessage = useChatStore((state) => state.addMessage);
