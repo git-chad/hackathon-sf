@@ -5,7 +5,11 @@ import ChatBottombar from "./chat-box";
 import { useChatStore } from "@/stores/useChatStore";
 import { useWebSocket } from "@/socket";
 
-const Messages = () => {
+type Props = {
+    support?: boolean
+}
+
+const Messages = ({ support }: Props) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messages = useChatStore((state) => state.messages);
 

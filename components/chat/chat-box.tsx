@@ -47,14 +47,14 @@ export default function ChatBottombar() {
       console.log("Sending formatted conversation:", formattedConversation);
   
       console.log("Emitting message to server...");
-      const dataMsg = {data: 'caca'}
+      const dataMsg = { data: message};
+      console.log("Message data:", dataMsg);
       socket.emit("messageToServer", dataMsg);
       console.log("Message emitted.");
       
       setMessage("");
     }
   };
-  
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === "Enter" && !event.shiftKey) {
